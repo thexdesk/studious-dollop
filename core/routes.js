@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
 router.post('/api/set/:id', (req, res) => {
   try {
     console.log(req.body)
-    data.path(req.params.id).put(req.body)
+    data.get(req.params.id).put(req.body)
     res.sendStatus(200)
   } catch (e) {
     console.log(e)
@@ -41,10 +41,10 @@ router.post('/api/set/:id', (req, res) => {
   }
 })
 
-router.get('/api/set/:id/:key/:value', (req, res) => {
+router.get('/api/set/:id/:key/:ue', (req, res) => {
   try {
-    var doc = {}; doc[req.params.key] = req.params.value
-    data.path(req.params.id).put(doc)
+    var doc = {}; doc[req.params.key] = req.params.onue
+    data.get(req.params.id).put(doc)
     res.sendStatus(200)
   } catch (e) {
     console.log(e)
@@ -56,8 +56,8 @@ router.get('/api/set/:id/:key/:value', (req, res) => {
 
 router.get('/api/link/:id/:link', (req, res) => {
   try {
-    var link = data.path(req.params.link)
-    data.path(req.params.id).path('link').put(link)
+    var link = data.get(req.params.link)
+    data.get(req.params.id).get('link').put(link)
     res.sendStatus(200)
   } catch (e) {
     console.log(e)
@@ -69,7 +69,7 @@ router.get('/api/link/:id/:link', (req, res) => {
 
 router.get('/api/get/:id/:key?', (req, res) => {
   try {
-    data.path(req.params.id).val(function (data) {
+    data.get(req.params.id).on(function (data) {
       if (!data) res.sendStatus(404)
 	  	else if (req.params.key) res.send(data[req.params.key])
 	  	else res.send(data)
@@ -82,7 +82,7 @@ router.get('/api/get/:id/:key?', (req, res) => {
 
 router.get('/api/getlink/:id', (req, res) => {
   try {
-    data.path(req.params.id).path('link').map().val(function (data, key) {
+    data.get(req.params.id).get('link').map().once(function (data, key) {
       console.log('Link:', key, data)
       if (!data) res.sendStatus(404)
 	  	else res.send(data)
@@ -97,7 +97,7 @@ router.get('/api/getlink/:id', (req, res) => {
 
 router.get('/api/unset/:id/:key?', (req, res) => {
   try {
-    data.path(req.params.id).put(null)
+    data.get(req.params.id).put(null)
     res.sendStatus(200)
   } catch (e) {
     console.log(e)

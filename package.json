@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "debug": "^2.6.3",
-    "express": "^4.15.2",
+    "express": "^4.17.1",
     "body-parser": "1.17.1",
-    "gun": "^0.6.7",
+    "gun": "^0.2020.1235",
     "morgan": "^1.8.1"
   },
   "devDependencies": {
