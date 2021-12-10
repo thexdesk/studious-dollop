@@ -1,0 +1,105 @@
+{
+  "version": "4f16b3bc",
+  "entry": {
+    "module": "/build/entry.client-AERH6AKD.js",
+    "imports": [
+      "/build/_shared/chunk-K5JEHQ7G.js",
+      "/build/_shared/chunk-5OQ3QANQ.js"
+    ]
+  },
+  "routes": {
+    "root": {
+      "id": "root",
+      "path": "",
+      "module": "/build/root-JCNRYBCE.js",
+      "imports": [
+        "/build/_shared/chunk-SMUT3OYJ.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": true,
+      "hasErrorBoundary": true
+    },
+    "routes/index": {
+      "id": "routes/index",
+      "parentId": "root",
+      "index": true,
+      "module": "/build/routes/index-5XEMRWJE.js",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/login": {
+      "id": "routes/login",
+      "parentId": "root",
+      "path": "login",
+      "module": "/build/routes/login-GG2BQSN4.js",
+      "hasAction": true,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/posts/$slug": {
+      "id": "routes/posts/$slug",
+      "parentId": "root",
+      "path": "posts/:slug",
+      "module": "/build/routes/posts/$slug-ZVYUT4YH.js",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/posts/updates": {
+      "id": "routes/posts/updates",
+      "parentId": "root",
+      "path": "posts/updates",
+      "module": "/build/routes/posts/updates-INJUQHHS.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/start": {
+      "id": "routes/start",
+      "parentId": "root",
+      "path": "start",
+      "module": "/build/routes/start-ATIGOZMB.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/tags/$userId": {
+      "id": "routes/tags/$userId",
+      "parentId": "root",
+      "path": "tags/:userId",
+      "module": "/build/routes/tags/$userId-AF42G445.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/tags/mint": {
+      "id": "routes/tags/mint",
+      "parentId": "root",
+      "path": "tags/mint",
+      "module": "/build/routes/tags/mint-5UZATFMA.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/tags/tag/$hash": {
+      "id": "routes/tags/tag/$hash",
+      "parentId": "root",
+      "path": "tags/tag/:hash",
+      "module": "/build/routes/tags/tag/$hash-PVJQLGIW.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    }
+  },
+  "url": "/build/manifest-4F16B3BC.js"
+}

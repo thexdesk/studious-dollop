@@ -2,9 +2,7 @@ var Gun = require('gun')
 var server = require('./app').server
 
 var gun = Gun({
-  web: server,
-  radisk: true,
-  localStorage: false
+  web: server
 })
-
-module.exports = gun
+var user = gun.user()
+module.exports = {gun, user}
